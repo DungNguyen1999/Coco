@@ -65,7 +65,54 @@ header {
    background: #813FFA;
    border: none;
    border-radius: 4px;
+   transition: transform 0.3s ease;
+   animation: bounce 1s infinite;
    padding: 14px 40px;
+}
+
+.header-nav ul button:hover,
+.header-content button:hover,
+.daily-text button:hover,
+.started button:hover {
+   animation: shake 0.8s infinite;
+}
+
+@keyframes bounce {
+
+   0%,
+   100% {
+      transform: translateY(0);
+   }
+
+   50% {
+      transform: translateY(-4px);
+   }
+}
+
+@keyframes shake {
+   0% {
+      transform: translateX(0);
+   }
+
+   20% {
+      transform: translateX(-2px) rotate(-2deg);
+   }
+
+   40% {
+      transform: translateX(2px) rotate(2deg);
+   }
+
+   60% {
+      transform: translateX(-2px) rotate(-2deg);
+   }
+
+   80% {
+      transform: translateX(2px) rotate(2deg);
+   }
+
+   100% {
+      transform: translateX(0) rotate(0);
+   }
 }
 
 .nav-language {
@@ -409,7 +456,7 @@ footer {
    margin-top: 40px;
 }
 
-.rng a,
+.rng li,
 .ft-contact span,
 .ft-bottom button span {
    font-size: 16px;
