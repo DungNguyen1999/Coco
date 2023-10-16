@@ -6,9 +6,11 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" />
    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
    <link rel="stylesheet" href="font.css">
    <link rel="stylesheet" href="reset.css">
    <link rel="stylesheet" href="style.css">
+   <link rel="stylesheet" href="responsive.css">
    <title>Coco</title>
 </head>
 
@@ -16,18 +18,20 @@
 
    <div class="wrapper">
 
-      <header>
+      <!-- HEADER PC -->
 
-         <div class="container">
+      <header class="header-pc">
 
-            <nav class="header-nav" data-aos="fade-down" data-aos-duration="500">
+         <nav class="header-nav">
+
+            <div class="container nav-content">
                <h1>
-                  <a href="https://coco.game/">
-                     <img src="./img/header/logo.png" alt="">
+                  <a href="https://coco.game/" target="_blank">
+                     <img src="./img/header/logo.png" alt="Logo Coco">
                   </a>
                </h1>
 
-               <ul>
+               <ul class="nav-list">
                   <li>
                      <a href="">Why Coco?</a>
                   </li>
@@ -35,7 +39,7 @@
                      <a href="">Events</a>
                   </li>
                   <li>
-                     <a href="">Bonused</a>
+                     <a href="">Bonuses</a>
                   </li>
                   <li>
                      <button>Sign Up</button>
@@ -43,25 +47,27 @@
                </ul>
 
                <div class="nav-language">
-                  <i class="fa-solid fa-globe"></i>
+                  <i class="fa-solid fa-globe" id="mobile-menu-icon"></i>
                   <span>EN</span>
                </div>
-            </nav>
+            </div>
+         </nav>
 
+         <div class="container">
             <div class="header-content">
 
-               <div class="header-title" data-aos="zoom-in" data-aos-duration="500">
-                  <h2>Mind-blowing bonuses.</h2>
-                  <h2>No withdrawal fees</h2>
-                  <h2>Lightning-fast customer support</h2>
+               <div class="header-title">
+                  <h2>Mind-Blowing Bonuses</h2>
+                  <h2>Provable Fairness</h2>
+                  <h2>Fully Licensed Casino</h2>
                </div>
 
-               <button data-aos="fade-up" data-aos-duration="500">Sign Up Now</button>
+               <button>Sign Up Now</button>
 
                <div class="header-method">
 
-                  <div class="header-available" data-aos="fade-right" data-aos-duration="500">
-                     <h4>Available Payment Method:</h4>
+                  <div class="header-currency" data-aos="fade-right" data-aos-duration="500">
+                     <h4 class="currency-title">Available Payment Method:</h4>
                      <ul>
                         <li>
                            <img src="./img/header/currency/BTC.png" alt="">
@@ -85,46 +91,190 @@
                   </div>
 
                   <div class="header-contact">
-                     <h4 style="text-align: right;">Follow Us On:</h4>
+                     <h4 class="contact-title">Follow Us On:</h4>
                      <ul>
                         <li>
-                           <a href="https://twitter.com/Casino_coco">
+                           <a href="https://twitter.com/Casino_coco" target="_blank">
                               <img src="./img/header/contact/TW.png" alt="">
                            </a>
                         </li>
                         <li>
-                           <a href="https://t.me/cocogame_official">
+                           <a href="https://t.me/cocogame_official" target="_blank">
                               <img src="./img/header/contact/Tele.png" alt="">
                            </a>
                         </li>
                         <li>
-                           <a href="https://discord.gg/P3mfFfYpNU">
+                           <a href="https://discord.gg/P3mfFfYpNU" target="_blank">
                               <img src="./img/header/contact/DC.png" alt="">
                            </a>
                         </li>
-                        <li>
-                           <a href="https://www.facebook.com/Cocogameofficial">
+                        <!-- <li>
+                           <a href="https://www.facebook.com/Cocogameofficial" target="_blank">
                               <img src="./img/header/contact/FB.png" alt="">
                            </a>
-                        </li>
+                        </li> -->
                      </ul>
                   </div>
                </div>
+            </div>
+         </div>
 
+      </header>
+
+      <!-- HEADER MOBILE -->
+
+      <header class="header-mb">
+
+         <nav class="header-nav">
+            <div class="container nav-content">
+               <h1>
+                  <a href="https://coco.game/" target="_blank">
+                     <img src="./img/header/logo.png" alt="Logo Coco">
+                  </a>
+               </h1>
+
+               <i class="fa-solid fa-bars"></i>
+            </div>
+
+            <!-- Popup -->
+
+            <div class="mobile-menu-popup" id="mobile-menu-popup">
+
+               <nav class="mobile-nav">
+                  <h1>
+                     <a href="https://coco.game/">
+                        <img src="./img/Mobile/logo.png" alt="">
+                     </a>
+                  </h1>
+
+                  <i class="fa-solid fa-x"></i>
+               </nav>
+
+               <ul class="mobile-menu-list">
+                  <li>
+                     <a href="">Why Coco?</a>
+                  </li>
+                  <li>
+                     <a href="">Events</a>
+                  </li>
+                  <li>
+                     <a href="">Bonuses</a>
+                  </li>
+               </ul>
+
+               <div class="language">
+
+                  <div class="language-option">
+
+                     <div class="language-text">
+                        <span>Language</span>
+                        <img class="icon-down" src="./img/Popup/arrow-down.png" alt="">
+                     </div>
+
+                     <ul class="language-list">
+                        <li class="language-item" data-value="ENG">
+                           <img src="./img/Popup/ENG.png" alt="">
+                           <span>English - ENG</span>
+                        </li>
+                        <li class="language-item" data-value="POR">
+                           <img src="./img/Popup/POR.png" alt="">
+                           <span>Portugal - POR</span>
+                        </li>
+                        <li class="language-item" data-value="TUR">
+                           <img src="./img/Popup/TUR.png" alt="">
+                           <span>Turkey - TUR</span>
+                        </li>
+                     </ul>
+                  </div>
+
+                  <span class="language-name">ENG</span>
+               </div>
+
+               <button>Sign Up</button>
+            </div>
+         </nav>
+
+         <div class="container">
+            <div class="header-content">
+               <div class="header-title">
+                  <h2>Mind-Blowing Bonuses</h2>
+                  <h2>Provable Fairness</h2>
+                  <h2>Fully Licensed Casino</h2>
+               </div>
+
+               <button>Sign Up Now</button>
             </div>
          </div>
 
       </header>
 
 
-      <!-- ELEVATE -->
+      <!-- BODY -->
 
 
       <main>
+
+         <!-- EVENT -->
+
          <div class="event">
             <div class="container">
 
                <div class="event-content">
+
+                  <!-- METHOD MB -->
+
+                  <div class="method-mb">
+
+                     <div class="header-currency" data-aos="fade-right" data-aos-duration="500">
+                        <h4 class="currency-title">Available Payment Method:</h4>
+                        <ul>
+                           <li>
+                              <img src="./img/header/currency/BTC.png" alt="">
+                           </li>
+                           <li>
+                              <img src="./img/header/currency/ETH.png" alt="">
+                           </li>
+                           <li>
+                              <img src="./img/header/currency/USDT.png" alt="">
+                           </li>
+                           <li>
+                              <img src="./img/header/currency/DOGE.png" alt="">
+                           </li>
+                           <li>
+                              <img src="./img/header/currency/BNB.png" alt="">
+                           </li>
+                           <li>
+                              <img src="./img/header/currency/SHIB.png" alt="">
+                           </li>
+                        </ul>
+                     </div>
+
+                     <div class="header-contact">
+                        <h4 class="contact-title">Follow Us On:</h4>
+                        <ul>
+                           <li>
+                              <a href="https://twitter.com/Casino_coco" target="_blank">
+                                 <img src="./img/header/contact/TW.png" alt="">
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://t.me/cocogame_official" target="_blank">
+                                 <img src="./img/header/contact/Tele.png" alt="">
+                              </a>
+                           </li>
+                           <li>
+                              <a href="https://discord.gg/P3mfFfYpNU" target="_blank">
+                                 <img src="./img/header/contact/DC.png" alt="">
+                              </a>
+                           </li>
+                           <!-- <li>
+                              <a href="https://www.facebook.com/Cocogameofficial" target="_blank">
+                                 <img src="./img/header/contact/FB.png" alt="">
+                              </a>
+                           </li> -->
+                        </ul>
+                     </div>
+                  </div>
 
                   <!-- LIST -->
 
@@ -228,11 +378,11 @@
                   <!-- DAILY -->
 
                   <div class="crypto">
-                     <h3 data-aos="fade-down" data-aos-duration="500">
+                     <h3 class="daily-title" data-aos="fade-down" data-aos-duration="500">
                         Participate in our <span>daily contest</span> and take the prize home
                      </h3>
 
-                     <div class="event-list">
+                     <div class="event-list daily-list">
 
                         <div class="daily-item">
                            <img data-aos="flip-right" data-aos-duration="500" src="./img/main/daily 1.png" alt="">
@@ -268,32 +418,34 @@
                <div class="love-content">
 
                   <div class="crypto">
-                     <h3 data-aos="zoom-in-down" data-aos-duration="500">
+                     <h3 class="love-title" data-aos="zoom-in-down" data-aos-duration="500">
                         Love <span>Bonus</span>? Love COCO
                      </h3>
 
-                     <ul>
-                        <li data-aos="fade-down" data-aos-duration="500">
+                     <ul class="love-list">
+                        <li class="love-item" data-aos="fade-down" data-aos-duration="500">
                            <img src="./img/main/love 1.png" alt="">
                            <h5>Level Up Rewards</h5>
                         </li>
 
-                        <li data-aos="fade-up" data-aos-duration="500">
+                        <li class="love-item" data-aos="fade-up" data-aos-duration="500">
                            <img src="./img/main/love 2.png" alt="">
                            <h5>Wagering Tournaments</h5>
                         </li>
 
-                        <li data-aos="fade-down" data-aos-duration="500">
+                        <li class="love-item" data-aos="fade-down" data-aos-duration="500">
                            <img src="./img/main/love 3.png" alt="">
                            <h5>Mystery Prizes</h5>
                         </li>
 
-                        <li data-aos="fade-up" data-aos-duration="500">
+                        <li class="love-item" data-aos="fade-up" data-aos-duration="500">
                            <img src="./img/main/love 4.png" alt="">
                            <h5>VIP Club</h5>
                         </li>
                      </ul>
                   </div>
+
+                  <!-- STARTED -->
 
                   <div class="started">
                      <h3 data-aos="flip-left" data-aos-duration="500">Let’s get started</h3>
@@ -318,81 +470,85 @@
 
                <ul class="ft-list">
                   <li class="ft-item">
+                     <h6>
+                        <a href="">Game Hub</a>
+                     </h6>
+
                      <ul>
                         <li>
-                           <a href="">Game Hub</a>
+                           <a href="https://coco.game/casino/crash" target="_blank">Crash</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/casino/crash">Crash</a>
+                           <a href="https://coco.game/casino/dice" target="_blank">Dice</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/casino/dice">Dice</a>
+                           <a href="https://coco.game/casino/mines" target="_blank">Mines</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/casino/mines">Mines</a>
+                           <a href="https://coco.game/casino/mochimonster" target="_blank">Mochi Monster</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/casino/mochimonster">Mochi Monster</a>
+                           <a href="https://coco.game/casino/cryptoquest" target="_blank">Crypto Quest</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/casino/cryptoquest">Crypto Quest</a>
+                           <a href="https://coco.game/casino/minipoker" target="_blank">Mini Poker</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/casino/minipoker">Mini Poker</a>
+                           <a href="https://coco.game/casino/bitfarm" target="_blank">Bit Farm</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/casino/bitfarm">Bit Farm</a>
+                           <a href="https://coco.game/casino/limbo" target="_blank">Limbo</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/casino/limbo">Limbo</a>
-                        </li>
-                        <li>
-                           <a href="https://coco.game/casino/baccarat">Baccarat</a>
+                           <a href="https://coco.game/casino/baccarat" target="_blank">Baccarat</a>
                         </li>
                      </ul>
                   </li>
 
                   <li class="ft-item">
+                     <h6>
+                        <a href="">Promotions</a>
+                     </h6>
+
                      <ul>
                         <li>
-                           <a href="">Promotions</a>
+                           <a href="https://coco.game/vip-club" target="_blank">VIP Club</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/vip-club">VIP Club</a>
+                           <a href="https://coco.game/affiliate" target="_blank">Affiliate</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/affiliate">Affiliate</a>
+                           <a href="https://coco.game/coming-soon" target="_blank">Promotions</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/coming-soon">Promotions</a>
-                        </li>
-                        <li>
-                           <a href="https://coco.game/coming-soon">Refer a friend</a>
+                           <a href="https://coco.game/coming-soon" target="_blank">Refer a friend</a>
                         </li>
                      </ul>
                   </li>
 
                   <li class="ft-item">
+                     <h6>
+                        <a href="https://coco.game/coming-soon" target="_blank">Support/Legal</a>
+                     </h6>
+
                      <ul>
                         <li>
-                           <a href="https://coco.game/coming-soon">Support/Legal</a>
+                           <a href="https://coco.game/help/provably-fair" target="_blank">Provably Fair</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/help/provably-fair">Provably Fair</a>
+                           <a href="https://coco.game/help/terms-service" target="_blank">Terms of service</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/help/terms-service">Terms of service</a>
+                           <a href="https://coco.game/help/aml" target="_blank">AML</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/help/aml">AML</a>
-                        </li>
-                        <li>
-                           <a href="https://coco.game/help/responsible-gambling">Responsible Gambling</a>
+                           <a href="https://coco.game/help/responsible-gambling" target="_blank">Responsible
+                              Gambling</a>
                         </li>
                         <!-- RNG -->
                         <li>
-                           <a
-                              href="https://itechlabs.com/certificates/OrisunNV/RNG_Certificate_UK__OrisunNV__29Jun23.pdf">
+                           <a href="https://itechlabs.com/certificates/OrisunNV/RNG_Certificate_UK__OrisunNV__29Jun23.pdf"
+                              target="_blank">
                               <ul class="rng">
                                  <li>RNG Certificated by</li>
                                  <li>
@@ -405,21 +561,22 @@
                   </li>
 
                   <li class="ft-item">
+                     <h6>
+                        <a href="https://coco.game/coming-soon" target="_blank">About us</a>
+                     </h6>
+
                      <ul>
                         <li>
-                           <a href="https://coco.game/coming-soon">About us</a>
+                           <a href="https://coco.game/blog" target="_blank">News</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/blog">News</a>
+                           <a href="https://coco.game/coming-soon" target="_blank">Business contacts</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/coming-soon">Business contacts</a>
+                           <a href="https://coco.game/coming-soon" target="_blank">Work with us</a>
                         </li>
                         <li>
-                           <a href="https://coco.game/coming-soon">Work with us</a>
-                        </li>
-                        <li>
-                           <a href="https://coco.game/coming-soon">Verify Representative</a>
+                           <a href="https://coco.game/coming-soon" target="_blank">Verify Representative</a>
                         </li>
                      </ul>
                   </li>
@@ -433,8 +590,8 @@
                <div class="ft-bottom">
 
                   <div class="ft-logo">
-                     <a href="https://coco.game/">
-                        <img src="./img/footer/logo.png" alt="">
+                     <a href="https://coco.game/" target="_blank">
+                        <img src="./img/footer/logo FT.png" alt="">
                      </a>
                      <p>
                         This website is owned and operated by Orisun N.V., a company registered and established under
@@ -447,25 +604,25 @@
                      <span>Follow us on</span>
                      <ul>
                         <li>
-                           <a href="https://twitter.com/Casino_coco">
+                           <a href="https://twitter.com/Casino_coco" target="_blank">
                               <img src="./img/footer/TW.png" alt="">
                            </a>
                         </li>
                         <li>
-                           <a href="https://t.me/cocogame_official">
+                           <a href="https://t.me/cocogame_official" target="_blank">
                               <img src="./img/footer/Tele.png" alt="">
                            </a>
                         </li>
                         <li>
-                           <a href="https://discord.gg/P3mfFfYpNU">
+                           <a href="https://discord.gg/P3mfFfYpNU" target="_blank">
                               <img src="./img/footer/DC.png" alt="">
                            </a>
                         </li>
-                        <li>
-                           <a href="https://www.facebook.com/Cocogameofficial">
+                        <!-- <li>
+                           <a href="https://www.facebook.com/Cocogameofficial" target="_blank">
                               <img src="./img/footer/FB.png" alt="">
                            </a>
-                        </li>
+                        </li> -->
                      </ul>
                   </div>
 
@@ -482,10 +639,18 @@
 
    </div>
 
+   <script src="jquery.min.js"></script>
+   <script src="index.js"></script>
+
+   <!-- AOS CSS -->
    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
    <script>
       AOS.init();
    </script>
+
+   <!-- Slick slider -->
+   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
 

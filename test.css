@@ -1,0 +1,25 @@
+/* Ẩn dropdown ban đầu */
+.dropdown {
+   display: none;
+}
+
+/* Hiển thị dropdown khi người dùng click vào "language-option" */
+.language-option {
+   cursor: pointer;
+}
+
+/* Hiển thị danh sách ngôn ngữ */
+ul {
+   list-style: none;
+   padding: 0;
+   margin: 0;
+}
+
+li {
+   cursor: pointer;
+}
+
+/* Cấu trúc dropdown */
+.dropdown.open {
+   display: block;
+}
