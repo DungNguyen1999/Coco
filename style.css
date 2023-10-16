@@ -91,7 +91,9 @@
    cursor: pointer;
 }
 
-.header-nav ul a:hover {
+.header-nav ul a:hover,
+.header-content button a,
+.header-nav ul button a {
    color: #FFFFFF;
 }
 
@@ -100,7 +102,7 @@
 .daily-text button,
 .started button {
    color: #FFFFFF;
-   background: #813FFA;
+   background: #813FFA !important;
    border: none;
    border-radius: 4px;
    transition: transform 0.3s ease;
