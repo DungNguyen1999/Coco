@@ -22,6 +22,11 @@
    color: #fff;
 }
 
+.fa-bars,
+.fa-x {
+   color: #fff;
+}
+
 /* LANGUAGE */
 
 .language-list {
