@@ -19,7 +19,7 @@
    width: 138px;
    height: 107px;
    position: fixed;
-   bottom: 30px;
+   bottom: 300px;
    right: 30px;
    cursor: pointer;
    transition: transform 0.3s ease;
