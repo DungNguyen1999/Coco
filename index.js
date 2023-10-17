@@ -97,6 +97,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Đặt nội dung mặc định cho "language-name"
 	languageName.textContent = 'ENG';
+
+	// Scroll Top
+
+	const scrollButton = document.querySelector('.scroll-top');
+
+	scrollButton.addEventListener('click', function () {
+		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
 });
 
 // Slick slider
