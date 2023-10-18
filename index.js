@@ -14,7 +14,7 @@ $(document).ready(function () {
 	var mobileMenuVisible = false;
 
 	// Khi click vào icon X
-	$('.fa-bars, .fa-x').on('click', function (event) {
+	$('.fa-bars, .fa-x, .nav-mobile').on('click', function (event) {
 		event.stopPropagation(); // Ngăn chặn sự kiện click kế tiếp lan ra ngoài
 
 		// Toggle hiển thị mobile-menu-popup
@@ -47,7 +47,6 @@ const icon = document.querySelector('.icon-down'); // Chọn biểu tượng
 // Mở hoặc đóng option khi click vào "language-option"
 languageOption.addEventListener('click', () => {
 	dropdown.classList.toggle('open');
-
 	icon.classList.toggle('rotate');
 });
 

@@ -444,7 +444,6 @@ main {
 footer {
    width: 100%;
    background: #110915;
-   border-top: 1px solid #2A394A;
    display: flex;
    flex-direction: column;
    padding: 60px 0;
