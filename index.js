@@ -64,13 +64,13 @@ function handleLanguageSelection(option) {
 	dropdown.classList.remove('open');
 	icon.classList.remove('rotate');
 
-	// Đảm bảo biểu tượng trở lại trạng thái ban đầu cho tất cả các language-items
+	// Đảm bảo biểu tượng trở lại trạng thái ban đầu cho tất cả các ngôn ngữ
 	languageOptions.forEach((item) => {
 		item.classList.remove('active');
 		item.querySelector('span').style.color = '#858997';
 	});
 
-	// Đặt lớp 'active' cho language-item tương ứng
+	// Đặt class 'active' cho ngôn ngữ tương ứng
 	option.classList.add('active');
 	option.querySelector('span').style.color = '#FFF';
 }
@@ -89,13 +89,13 @@ document.addEventListener('DOMContentLoaded', () => {
 		'.language-list .language-item[data-value="ENG"]'
 	);
 
-	// Gán lớp 'active' cho "language-item" mặc định
+	// Gán class 'active' cho ngôn ngữ mặc định
 	defaultLanguageItem.classList.add('active');
 
-	// Đặt màu cho nội dung của "language-item" mặc định
+	// Màu cho ngôn ngữ mặc định
 	defaultLanguageItem.querySelector('span').style.color = '#FFF';
 
-	// Đặt nội dung mặc định cho "language-name"
+	// Đặt ngôn ngữ mặc định
 	languageName.textContent = 'ENG';
 
 	// Scroll Top
@@ -104,6 +104,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	scrollButton.addEventListener('click', function () {
 		window.scrollTo({ top: 0, behavior: 'smooth' });
+	});
+
+	// Nav header
+
+	const navList = document.querySelector('.nav-list');
+
+	navList.addEventListener('click', function (e) {
+		if (e.target.tagName === 'A') {
+			e.preventDefault();
+			const targetId = e.target.getAttribute('href').substring(1);
+			const targetElement = document.getElementById(targetId);
+			if (targetElement) {
+				targetElement.scrollIntoView({ behavior: 'smooth' });
+			}
+		}
 	});
 });
 

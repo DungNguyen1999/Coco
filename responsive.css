@@ -46,7 +46,6 @@
    color: #fff;
 }
 
-/* Xoay biểu tượng khi mở dropdown */
 .rotate {
    transform: rotate(-90deg);
    transition: transform 0.2s;
@@ -54,15 +53,18 @@
 
 /* RP */
 
+/* 1440px */
+
+@media (max-width: 1440px) {
+   .container {
+      min-width: 85%;
+      max-width: 85%;
+   }
+}
+
 /* 1200px */
 
 @media (max-width: 1200px) {
-   .container {
-      min-width: 95%;
-      max-width: 95%;
-      overflow: hidden;
-   }
-
    .mini-game {
       width: 88px;
       height: 77px;
@@ -72,8 +74,9 @@
 
    /* HEADER */
 
-   header {
-      margin-bottom: 110px;
+   header,
+   #events {
+      margin-bottom: 40px;
    }
 
    .header-nav {
@@ -115,7 +118,8 @@
    /* HEADER CONTENT */
 
    .header-content {
-      padding-top: 170px;
+      gap: 80px;
+      padding-top: 160px;
    }
 
    .header-text {
@@ -127,7 +131,7 @@
    }
 
    .header-title h2 {
-      font-size: 42px;
+      font-size: 39px;
    }
 
    .header-text button {
@@ -142,7 +146,7 @@
    .header-currency h4,
    .header-contact h4,
    .event-text h4 {
-      font-size: 22px;
+      font-size: 20px;
    }
 
    .header-currency ul {
@@ -161,12 +165,19 @@
 
    /* MAIN */
 
-   main {
+   main,
+   .event {
       gap: 110px;
    }
 
    .event {
-      gap: 110px;
+      margin-bottom: 40px;
+   }
+
+   #why-coco,
+   #events,
+   #bonuses {
+      padding-top: 70px;
    }
 
    .event-item {
@@ -175,8 +186,8 @@
    }
 
    .event-item img {
-      width: 135px;
-      height: 135px;
+      width: 120px;
+      height: 120px;
    }
 
    .event-text {
@@ -262,8 +273,9 @@
       gap: 28px;
    }
 
-   .ft-list {
-      padding: 0 100px;
+   .ft-list,
+   .ft-bottom {
+      padding: 0 70px;
    }
 
    .ft-item,
@@ -292,10 +304,6 @@
    }
 
    /* FT BOTTOM */
-
-   .ft-bottom {
-      padding: 0 100px;
-   }
 
    .ft-logo {
       gap: 10px;
@@ -334,6 +342,11 @@
 
 @media (max-width: 900px) {
 
+   .container {
+      min-width: 90%;
+      max-width: 90%;
+   }
+
    .mini-game {
       width: 88px;
       height: 77px;
@@ -343,8 +356,9 @@
 
    /* HEADER */
 
-   header {
-      margin-bottom: 90px;
+   header,
+   #events {
+      margin-bottom: 30px;
    }
 
    .header-nav h1 img {
@@ -378,11 +392,12 @@
    /* HEADER CONTENT */
 
    .header-content {
-      padding-top: 140px;
+      gap: 70px;
+      padding-top: 130px;
    }
 
    .header-text {
-      gap: 35px;
+      gap: 30px;
    }
 
    .header-title {
@@ -390,11 +405,15 @@
    }
 
    .header-title h2 {
-      font-size: 32px;
+      font-size: 30px;
    }
 
    .header-text button {
       padding: 14px 35px;
+   }
+
+   .header-body img {
+      margin-left: 15px;
    }
 
    /* METHOD */
@@ -407,7 +426,7 @@
    .header-currency h4,
    .header-contact h4,
    .event-text h4 {
-      font-size: 20px;
+      font-size: 18px;
    }
 
    .header-currency ul {
@@ -426,12 +445,19 @@
 
    /* MAIN */
 
-   main {
+   main,
+   .event {
       gap: 90px;
    }
 
    .event {
-      gap: 90px;
+      margin-bottom: 30px;
+   }
+
+   #why-coco,
+   #events,
+   #bonuses {
+      padding-top: 60px;
    }
 
    .event-item {
@@ -440,8 +466,8 @@
    }
 
    .event-item img {
-      width: 110px;
-      height: 110px;
+      width: 90px;
+      height: 90px;
    }
 
    .event-text {
@@ -529,8 +555,9 @@
       gap: 24px;
    }
 
-   .ft-list {
-      padding: 0 70px;
+   .ft-list,
+   .ft-bottom {
+      padding: 0 50px;
    }
 
    .ft-item,
@@ -560,17 +587,13 @@
 
    /* FT BOTTOM */
 
-   .ft-bottom {
-      padding: 0 70px;
-   }
-
    .ft-logo {
       gap: 8px;
    }
 
    .ft-logo img {
       width: 140px;
-      height: 55px;
+      height: 60px;
    }
 
    .ft-contact {
@@ -609,7 +632,7 @@
    /* POPUP */
 
    .mobile-menu-popup {
-      padding: 8px 15px;
+      padding: 8px 25px;
    }
 
    .mobile-nav {

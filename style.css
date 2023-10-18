@@ -9,10 +9,9 @@
 }
 
 .container {
-   min-width: 1440px;
-   max-width: 1440px;
+   min-width: 1500px;
+   max-width: 1500px;
    margin: 0 auto;
-   overflow: hidden;
 }
 
 .mini-game {
@@ -34,9 +33,10 @@
 
 /* HEADER */
 
-header {
+header,
+#events {
    width: 100%;
-   margin-bottom: 140px;
+   margin-bottom: 60px;
 }
 
 .header-nav {
@@ -261,6 +261,7 @@ main {
    display: flex;
    flex-direction: column;
    gap: 140px;
+   margin-bottom: 60px;
 }
 
 .event-list {
@@ -268,6 +269,12 @@ main {
    display: flex;
    justify-content: space-between;
    flex-wrap: wrap;
+}
+
+#why-coco,
+#events,
+#bonuses {
+   padding-top: 80px;
 }
 
 .event-item {
