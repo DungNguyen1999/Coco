@@ -27,6 +27,7 @@
    z-index: 10;
 }
 
+
 .method-mb {
    display: none;
 }
@@ -99,7 +100,7 @@ header {
 .nav-list button a,
 .nav-language:hover i,
 .nav-language:hover span,
-.header-text button a {
+.wrapper button a {
    color: #FFFFFF;
    font-weight: 700;
 }
