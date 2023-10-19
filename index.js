@@ -10,21 +10,16 @@ $(document).ready(function () {
 			$('.header-nav').removeClass('scrolled');
 		}
 	});
-	// Kiểm tra trạng thái hiển thị của popup
 	var mobileMenuVisible = false;
 
-	// Khi click vào icon X
 	$('.fa-bars, .fa-x, .nav-mobile').on('click', function (event) {
-		event.stopPropagation(); // Ngăn chặn sự kiện click kế tiếp lan ra ngoài
+		event.stopPropagation();
 
-		// Toggle hiển thị mobile-menu-popup
 		$('.mobile-menu-popup').slideToggle(200);
 
-		// Cập nhật mobileMenuVisible
 		mobileMenuVisible = !mobileMenuVisible;
 	});
 
-	// Ẩn popup khi click ra ngoài
 	$(document).on('click', function (event) {
 		if (mobileMenuVisible && $(window).width() <= 650) {
 			$('.mobile-menu-popup').slideUp(200);
@@ -32,7 +27,6 @@ $(document).ready(function () {
 		}
 	});
 
-	// Ngăn chặn sự kiện click của popup lan ra ngoài và ẩn nó đi
 	$('.mobile-menu-popup').on('click', function (event) {
 		event.stopPropagation();
 	});
@@ -42,15 +36,12 @@ $(document).ready(function () {
 
 const languageOption = document.querySelector('.language-text');
 const dropdown = document.querySelector('.language-list');
-const icon = document.querySelector('.icon-down'); // Chọn biểu tượng
+const icon = document.querySelector('.icon-down');
 
-// Mở hoặc đóng option khi click vào "language-option"
 languageOption.addEventListener('click', () => {
 	dropdown.classList.toggle('open');
 	icon.classList.toggle('rotate');
 });
-
-// Xử lý khi người dùng chọn một ngôn ngữ
 
 const languageName = document.querySelector('.language-name');
 const languageOptions = document.querySelectorAll(
@@ -63,13 +54,11 @@ function handleLanguageSelection(option) {
 	dropdown.classList.remove('open');
 	icon.classList.remove('rotate');
 
-	// Đảm bảo biểu tượng trở lại trạng thái ban đầu cho tất cả các ngôn ngữ
 	languageOptions.forEach((item) => {
 		item.classList.remove('active');
 		item.querySelector('span').style.color = '#858997';
 	});
 
-	// Đặt class 'active' cho ngôn ngữ tương ứng
 	option.classList.add('active');
 	option.querySelector('span').style.color = '#FFF';
 }
@@ -80,21 +69,15 @@ languageOptions.forEach((option) => {
 	});
 });
 
-// Xử lý khi tải trang
-
 document.addEventListener('DOMContentLoaded', () => {
-	// Tìm "language-item" có nội dung là "English - ENG"
 	const defaultLanguageItem = document.querySelector(
 		'.language-list .language-item[data-value="ENG"]'
 	);
 
-	// Gán class 'active' cho ngôn ngữ mặc định
 	defaultLanguageItem.classList.add('active');
 
-	// Màu cho ngôn ngữ mặc định
 	defaultLanguageItem.querySelector('span').style.color = '#FFF';
 
-	// Đặt ngôn ngữ mặc định
 	languageName.textContent = 'ENG';
 
 	// Scroll Top
@@ -107,7 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 	// Nav header
 
-	const navList = document.querySelector('.nav-list');
+	const navList = document.querySelector('.nav-list-scroll');
 
 	navList.addEventListener('click', function (e) {
 		if (e.target.tagName === 'A') {
@@ -131,7 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // 			dots: true,
 // 			arrows: false,
 // 			customPaging: function (slider, i) {
-// 				return '<button class="dot"></button>'; // Thay thế số bằng dấu chấm
+// 				return '<button class="dot"></button>';
 // 			},
 // 		});
 // 	}

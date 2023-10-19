@@ -68,7 +68,8 @@ header,
    margin-top: 12px;
 }
 
-.nav-list {
+.nav-list,
+.nav-list-scroll {
    width: fit-content;
    display: flex;
    align-items: center;
@@ -77,10 +78,10 @@ header,
 
 .nav-list a,
 .nav-language span,
-.header-text button,
+.header-content-btn,
 .event-text span,
-.daily-text button,
-.started button {
+.daily-btn,
+.started-btn {
    width: fit-content;
    font-size: 20px;
    font-weight: 700;
@@ -100,15 +101,22 @@ header,
 .nav-list button a,
 .nav-language:hover i,
 .nav-language:hover span,
-.wrapper button a {
+.wrapper button a,
+.btn-nav {
    color: #FFFFFF;
    font-weight: 700;
 }
 
+.btn-nav {
+   color: #FFFFFF !important;
+   font-weight: 700 !important;
+}
+
 .nav-list button,
-.header-text button,
-.daily-text button,
-.started button {
+.header-content-btn,
+.daily-btn,
+.started-btn,
+.btn-nav {
    color: #FFFFFF;
    background: #813FFA;
    border: none;
@@ -120,10 +128,11 @@ header,
 }
 
 .nav-list button:hover,
-.header-text button:hover,
-.daily-text button:hover,
-.started button:hover,
-.mini-game:hover {
+.header-content-btn:hover,
+.daily-btn:hover,
+.started-btn:hover,
+.mini-game:hover,
+.btn-nav:hover {
    animation: shake 0.8s infinite;
 }
 
@@ -178,7 +187,7 @@ header,
    line-height: normal;
 }
 
-.header-text button {
+.header-content-btn {
    width: fit-content;
    padding: 20px 70px;
 }
@@ -427,7 +436,7 @@ main {
    text-transform: capitalize;
 }
 
-.started button {
+.started-btn {
    padding: 20px 60px;
    margin: 30px 0 16px;
 }
