@@ -57,8 +57,8 @@
 
 @media (max-width: 1440px) {
    .container {
-      min-width: 85%;
-      max-width: 85%;
+      min-width: 90%;
+      max-width: 90%;
    }
 }
 
@@ -98,16 +98,16 @@
    }
 
    .nav-list a,
-   .nav-list button,
+   .btn-nav,
    .nav-language span,
-   .header-text button,
-   .daily-text button,
-   .started button {
+   .header-content-btn,
+   .daily-btn,
+   .started-btn {
       font-size: 16px;
    }
 
-   .nav-list button,
-   .daily-text button {
+   .btn-nav,
+   .daily-btn {
       padding: 12px 30px;
    }
 
@@ -134,7 +134,7 @@
       font-size: 39px;
    }
 
-   .header-text button {
+   .header-content-btn {
       padding: 16px 50px;
    }
 
@@ -174,10 +174,9 @@
       margin-bottom: 40px;
    }
 
-   #why-coco,
    #events,
    #bonuses {
-      padding-top: 70px;
+      margin-top: 70px;
    }
 
    .event-item {
@@ -232,7 +231,7 @@
    /* LOVE */
 
    .love {
-      padding-bottom: 130px;
+      margin-bottom: 130px;
    }
 
    .love-content {
@@ -254,7 +253,7 @@
       font-size: 30px;
    }
 
-   .started button {
+   .started-btn {
       padding: 16px 50px;
       margin: 25px 0 14px;
    }
@@ -342,11 +341,6 @@
 
 @media (max-width: 900px) {
 
-   .container {
-      min-width: 90%;
-      max-width: 90%;
-   }
-
    .mini-game {
       width: 88px;
       height: 77px;
@@ -358,7 +352,7 @@
 
    header,
    #events {
-      margin-bottom: 30px;
+      margin-bottom: 40px;
    }
 
    .header-nav h1 img {
@@ -371,17 +365,20 @@
    }
 
    .nav-list a,
-   .nav-list button,
+   .btn-nav,
    .nav-language span,
-   .header-text button,
-   .daily-text button,
-   .started button {
-      font-size: 14px;
+   .header-content-btn,
+   .daily-btn,
+   .started-btn {
+      font-size: 12px;
    }
 
-   .nav-list button,
-   .daily-text button,
-   .started button {
+   .btn-nav {
+      padding: 10px 16px;
+   }
+
+   .daily-btn,
+   .started-btn {
       padding: 10px 28px;
    }
 
@@ -408,12 +405,8 @@
       font-size: 30px;
    }
 
-   .header-text button {
+   .header-content-btn {
       padding: 14px 35px;
-   }
-
-   .header-body img {
-      margin-left: 15px;
    }
 
    /* METHOD */
@@ -454,10 +447,9 @@
       margin-bottom: 30px;
    }
 
-   #why-coco,
    #events,
    #bonuses {
-      padding-top: 60px;
+      margin-top: 60px;
    }
 
    .event-item {
@@ -515,7 +507,7 @@
    /* LOVE */
 
    .love {
-      padding-bottom: 110px;
+      margin-bottom: 100px;
    }
 
    .love-content {
@@ -537,7 +529,7 @@
       font-size: 25px;
    }
 
-   .started button {
+   .started-btn {
       margin: 20px 0 12px;
    }
 
@@ -761,21 +753,22 @@
    /* .nav-list a, */
    /* .nav-list button, */
    /* .nav-language span, */
-   .header-text button,
-   .daily-text button,
-   .started button {
+   .header-content-btn,
+   .daily-btn,
+   .started-btn {
       font-size: 16px;
    }
 
    /* .nav-list button, */
-   .daily-text button,
-   .started button {
+   .daily-btn,
+   .started-btn {
       padding: 12px 24px;
    }
 
    /* HEADER CONTENT */
 
    .header-content {
+      gap: 50px;
       padding-top: 110px;
    }
 
@@ -795,25 +788,20 @@
       text-align: center;
    }
 
-   .header-body img {
-      width: 100%;
+   .header-content-btn {
+      padding: 14px 40px;
    }
 
-   .header-text button {
-      padding: 14px 40px;
+   .header-banner {
+      width: 100%;
    }
 
    /* METHOD MB */
 
    .header-method {
-      display: none;
-   }
-
-   .method-mb {
-      display: flex;
       flex-direction: column;
       align-items: center;
-      gap: 15px;
+      gap: 12px;
    }
 
    .header-currency,
@@ -849,10 +837,6 @@
 
    .event {
       gap: 0;
-      margin-bottom: 0;
-   }
-
-   #events {
       margin-bottom: 0;
    }
 
@@ -933,7 +917,7 @@
    /* LOVE */
 
    .love {
-      padding-bottom: 70px;
+      margin-bottom: 70px;
    }
 
    .love-content {
@@ -959,7 +943,7 @@
       font-size: 28px;
    }
 
-   .started button {
+   .started-btn {
       margin: 16px 0 12px;
    }
 
@@ -1163,15 +1147,16 @@
    /* .nav-list a, */
    /* .nav-list button, */
    /* .nav-language span, */
-   .header-text button,
-   .daily-text button,
-   .started button {
+   .header-content-btn,
+   .daily-btn,
+   .started-btn {
       font-size: 14px;
    }
 
    /* HEADER CONTENT */
 
    .header-content {
+      gap: 40px;
       padding-top: 90px;
    }
 
@@ -1191,39 +1176,8 @@
       font-size: 20px;
    }
 
-   .header-body img {
-      width: 90%;
-      margin-left: 10px;
-   }
-
-   .header-text button {
+   .header-content-btn {
       padding: 12px 35px;
-   }
-
-   /* METHOD MB */
-
-   .method-mb {
-      gap: 12px;
-   }
-
-   .header-currency,
-   .header-contact {
-      gap: 8px;
-   }
-
-   .header-currency h4,
-   .header-contact h4 {
-      font-size: 16px;
-   }
-
-   .header-currency ul {
-      gap: 12px;
-   }
-
-   .header-currency img,
-   .header-contact img {
-      width: 40px;
-      height: 40px;
    }
 
    /* MAIN */
@@ -1232,10 +1186,9 @@
       gap: 40px;
    }
 
-   #why-coco,
    #events,
    #bonuses {
-      padding-top: 50px;
+      margin-top: 0;
    }
 
    .event-list {
@@ -1272,6 +1225,7 @@
 
    .crypto {
       gap: 16px;
+      margin-bottom: 40px;
    }
 
    .crypto h3 {
@@ -1308,11 +1262,11 @@
    /* LOVE */
 
    .love {
-      padding-bottom: 50px;
+      margin-bottom: 50px;
    }
 
    .love-content {
-      gap: 40px;
+      gap: 0;
    }
 
    .love-title {
@@ -1337,7 +1291,7 @@
       font-size: 24px;
    }
 
-   .started button {
+   .started-btn {
       margin: 14px 0 10px;
    }
 

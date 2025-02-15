@@ -9,8 +9,8 @@
 }
 
 .container {
-   min-width: 1500px;
-   max-width: 1500px;
+   min-width: 1400px;
+   max-width: 1400px;
    margin: 0 auto;
 }
 
@@ -24,11 +24,6 @@
    transition: transform 0.3s ease;
    animation: bounce 1s infinite;
    z-index: 10;
-}
-
-
-.method-mb {
-   display: none;
 }
 
 /* HEADER */
@@ -112,7 +107,6 @@ header,
    font-weight: 700 !important;
 }
 
-.nav-list button,
 .header-content-btn,
 .daily-btn,
 .started-btn,
@@ -127,7 +121,6 @@ header,
    padding: 14px 35px;
 }
 
-.nav-list button:hover,
 .header-content-btn:hover,
 .daily-btn:hover,
 .started-btn:hover,
@@ -192,8 +185,13 @@ header,
    padding: 20px 70px;
 }
 
-.header-body img {
+.header-banner {
    width: 50%;
+   overflow: hidden;
+}
+
+.header-banner img {
+   width: 100%;
 }
 
 /* METHOD */
@@ -280,10 +278,9 @@ main {
    flex-wrap: wrap;
 }
 
-#why-coco,
 #events,
 #bonuses {
-   padding-top: 80px;
+   margin-top: 80px;
 }
 
 .event-item {
@@ -388,7 +385,7 @@ main {
 /* LOVE */
 
 .love {
-   padding-bottom: 170px;
+   margin-bottom: 170px;
 }
 
 .love-content {
